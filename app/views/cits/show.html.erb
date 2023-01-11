@@ -1,0 +1,12 @@
+<h1>Descrición de cita</h1>
+
+<%= link_to "Editar", edit_cit_path(@cit.id), class: "btn btn-primary" %>
+<%= link_to "Delete",
+  cit_path(@cit), class: "btn btn-primary",
+  data: {turbo_method: :delete, turbo_confirm: "¿Seguro que quieres eliminar esta cita?"}
+%>
+
+<br>
+<br>
+
+<%= link_to "Volver a la lista", cits_path, class: "btn btn-primary" %>

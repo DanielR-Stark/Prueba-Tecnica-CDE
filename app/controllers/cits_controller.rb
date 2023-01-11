@@ -17,16 +17,18 @@ class CitsController < ApplicationController
 
   def create
     @cit = Cit.new(cit_params)
+    @cit.activo = 1
     if @cit.save
-      redirect_to
+      redirect_to root_path
     else
       render :new
     end
   end
 
   def update
+    @cit = Cit.find(params[:id])
     if @cit.update(cit_params)
-      redirect_to
+      redirect_to cit_path(@cit)
     else
       render :edit
     end
@@ -35,7 +37,7 @@ class CitsController < ApplicationController
   def destroy
     @cit = Cit.find(params[:id])
     @cit.destroy
-    redirect_to
+    redirect_to cits_path
   end
 
   private

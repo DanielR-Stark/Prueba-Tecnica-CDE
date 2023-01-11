@@ -1,2 +1,6 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<h1>Gestión de citas medicas</h1>
+<br>
+<p>Seleccione una de las siguientes acciones</p>
+<br>
+<%= link_to "Crear nueva cita", new_cit_path, class: "btn btn-primary" %>
+<%= link_to "Revisar Citas existentes",  cits_path, class: "btn btn-primary" %>

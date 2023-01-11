@@ -1,0 +1,18 @@
+<h1>Citas</h1>
+
+<ul>
+  <% @cits.each do |c| %>
+    <li><a>Fecha: </a><%= c.fecha %></li>
+    <li><a>Hora: </a><%= c.hora %></li>
+    <li><a>Diagnostico: </a><%= c.diagnostico %></li>
+    <li><a>Activo: </a><%= c.activo %></li>
+    <%= link_to "Ver", cit_path(c.id), class: "btn btn-primary" %>
+    <br>
+    <br>
+  <% end %>
+</ul>
+
+<br>
+<br>
+
+<%= link_to "Volver a inicio", root_path, class: "btn btn-primary" %>
