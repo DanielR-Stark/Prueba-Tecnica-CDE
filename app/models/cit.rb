@@ -1,0 +1,2 @@
+class Cit < ApplicationRecord
+end

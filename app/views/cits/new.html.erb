@@ -1,0 +1,11 @@
+<h1> Nueva cita</h1>
+
+  <%= simple_form_for @cit  do |f| %>
+    <%= f.input :fecha, as: :date %>
+    <%= f.input :hora, as: :time %>
+    <%= f.input :diagnostico, as: :text %>
+    <%= f.input :activo, as: :boolean %>
+    <%= f.submit class: "myButton" %>
+  <% end %>
+  <br>
+<%= link_to "Volver a inicio", root_path %>

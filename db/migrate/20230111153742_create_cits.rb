@@ -1,6 +1,6 @@
-class CreateCita < ActiveRecord::Migration[7.0]
+class CreateCits < ActiveRecord::Migration[7.0]
   def change
-    create_table :cita do |t|
+    create_table :cits do |t|
       t.date :fecha
       t.time :hora
       t.text :diagnostico
